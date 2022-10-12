@@ -10,7 +10,7 @@ dados = st.sidebar.file_uploader("")
 pagina = st.sidebar.checkbox('dados carregados')
 
 if pagina == True:
-    df = pd.read_csv(dados)
+    df = pd.read_excel(dados)
     df['QUANTIDADE'] = pd.to_numeric(df["QUANTIDADE"])
     
     lista_Os = df.OS.unique()
